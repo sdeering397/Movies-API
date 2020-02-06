@@ -26,9 +26,9 @@ export class ApiService {
     return this.http.get(this._url2);
   }
 
-// //baseUrl = this.id
+// baseUrl = this.id
 
-//   //_url3=`https://api.themoviedb.org/3/movie/${this.baseUrl}?api_key=b9e5c9c00c0d2cb749516b3e2ecbfcc1&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`;
+//   _url3=`https://api.themoviedb.org/3/movie/${this.baseUrl}?api_key=b9e5c9c00c0d2cb749516b3e2ecbfcc1&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`;
 
 //   getMovieById(){
 //     return this.http.get(this._url3);
