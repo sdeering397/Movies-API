@@ -12,8 +12,6 @@ export class MovieDetailComponent implements IMovie {
   genre : string;
   length : number;
 
-  movieList : IMovie[] = [];
-
   constructor() { }
 
   ngOnInit() {
