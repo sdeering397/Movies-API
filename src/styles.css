@@ -106,3 +106,7 @@ p {
 .thumbnail {
     width: 350px;
 }
+
+app-root {
+width: 100%;
+}
