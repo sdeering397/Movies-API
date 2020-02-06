@@ -1,3 +1,6 @@
 <div *ngFor="let movie of movieList, let i=index">
     <h2 *ngIf="i<20">{{movie.title}}</h2>
+    <button (click)="toggleMovieDetail()">See Details</button>
+    
 </div>
+<movie-detail *ngIf="show"></movie-detail>

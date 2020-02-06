@@ -13,4 +13,8 @@ export class ApiService {
   getMovieList(){
     return this.http.get(this._url);
   }
+
+  getMovie(movieId : number){
+    return this.http.get(`${this._url}/${movieId}`);
+  }
 }

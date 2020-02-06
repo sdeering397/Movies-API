@@ -12,6 +12,7 @@ export class MovieListComponent implements IMovie {
   public rating : number;
   public genre : string;
   public length : number;
+  public show:boolean = false;
 
   public movieList : IMovie[] = [];
 
@@ -23,5 +24,8 @@ export class MovieListComponent implements IMovie {
 
   }
 
+  toggleMovieDetail(){
+    this.show=!this.show;
+  }
 
 }
