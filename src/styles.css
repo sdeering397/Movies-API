@@ -1,1 +1,108 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0px;
+    font-family: 'Muli', sans-serif;
+}
+
+nav{
+    background-color: rgb(28, 28, 28);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+body {
+    background-color: black;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer {
+    background-color: rgb(122, 44, 6);
+    border-top: rgb(228, 77, 1) 5px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+i {
+    padding: 15px;
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.fa-star {
+    color: rgb(228, 77, 1);
+}
+.thick {
+    font-weight: 900;
+}
+.thin {
+    font-weight: lighter;
+}
+.orange {
+    color: rgb(228, 77, 1);
+}
+a:hover {
+    color: white;
+}
+a {
+    padding: 0px 15px;
+}
+h2 {
+    font-size: 45px;
+}
+.padding-10 {
+    padding: 10px;
+}
+p {
+    padding: 5px 0px;
+}
+.button {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: rgb(228, 77, 1);
+    text-align: center;
+    font-size: 35px;
+    position: absolute;
+    right: 0px;
+    z-index: 1;
+}
+.button:hover {
+    color: white;
+    background-color: rgb(228, 77, 1);
+}
+
+
+.movie-card {
+    width: 350px;
+    background-color: rgb(28, 28, 28);
+    margin: 50px;
+    color: white;
+}
+
+.movie-card-inner {
+    padding: 15px;
+}
+
+.movie-card-top {
+    position: relative;
+}
+
+.logo {
+    width: 200px;
+}
+
+.thumbnail {
+    width: 350px;
+}
