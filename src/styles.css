@@ -107,6 +107,13 @@ p {
     width: 350px;
 }
 
-app-root {
-width: 100%;
+.orange-button {
+    background-color: rgb(228, 77, 1);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    width: 350px;
+    margin: 50px;
+    font-size: large;
 }
