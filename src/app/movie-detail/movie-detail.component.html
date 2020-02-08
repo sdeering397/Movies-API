@@ -1,9 +1,10 @@
 <div class="movie-detail" *ngIf="show">
-    <h2 class="movie-title">Title</h2>
     <p class="movie-overview">{{movie.overview}}</p>
-    <p class="movie-runtime">Runtime</p>
-    <a>link</a>
-    <button class="add-to-watchlist">Add To Watchlist</button>
+    <p class="movie-runtime">{{movie.runtime}} minutes</p>
+    <a>link to somewhere?</a>
+    <button class="add-to-watchlist">+</button>
     <button (click)="closeDetail()">X</button>
 </div>
+<button (click)="toggleMovieDetail()">See More</button>
+
 

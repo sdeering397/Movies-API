@@ -1,6 +1,26 @@
-<div *ngFor="let movie of movieList, let i=index">
-    <h2 *ngIf="i<20">{{movie.title}}</h2>
-    <button (click)="toggleMovieDetail()">See Details</button>
+<span class="flex">
     
-</div>
-<movie-detail *ngIf="show"></movie-detail>
+    <div class="movie-card" *ngFor="let movie of movieList">
+      
+      <div class="movie-card-inner">
+        
+        <span class="flex">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <p class="padding-10"></p>
+        </span>
+        
+        <h2 class="thick">{{movie.title}}</h2>
+        <img class="thumbnail" [src]="movie.poster_path" alt="movie thumbnail">
+        <p>rating: {{movie.vote_average}} out of 10</p>
+
+        <div class="movie-card-top">
+            <movie-detail [movieId]="movie.id"></movie-detail>
+          </div>
+        
+      </div>
+    </div>
+  

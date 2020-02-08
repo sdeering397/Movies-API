@@ -24,8 +24,4 @@ export class MovieListComponent implements IMovie {
 
   }
 
-  toggleMovieDetail(){
-    this.show=!this.show;
-  }
-
 }
