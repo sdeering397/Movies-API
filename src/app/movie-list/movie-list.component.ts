@@ -21,7 +21,6 @@ export class MovieListComponent implements IMovie {
   ngOnInit() {
     this._service.getMovieList()
       .subscribe((data:any) => this.movieList = data.results);
-
   }
 
 }

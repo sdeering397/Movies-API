@@ -1,10 +1,9 @@
 <div class="movie-detail" *ngIf="show">
     <p class="movie-overview">{{movie.overview}}</p>
-    <p class="movie-runtime">{{movie.runtime}} minutes</p>
+    <p *ngFor="let genre of genreList, let i=index">{{movie.genres[i].name}}</p>
+    <p class="movie-runtime">runtime: {{movie.runtime}} minutes</p>
     <a>link to somewhere?</a>
     <button class="add-to-watchlist">+</button>
-    <button (click)="closeDetail()">X</button>
 </div>
 <button (click)="toggleMovieDetail()">See More</button>
-
 

@@ -7,25 +7,24 @@ import { IMovie } from '../imovie';
   templateUrl: './movie-detail.component.html',
   styleUrls: ['./movie-detail.component.css']
 })
+
 export class MovieDetailComponent  {  
   @Input() 
   movieId : number; 
-
-  public show:boolean = false;
-
-  // movie : any; 
+  genreId : number; 
+  show:boolean = false;
   movie : any; 
+  genreList = [];
 
   constructor(private _service: ApiService) {}
 
   ngOnInit(){
     this._service.getMovieById(this.movieId).subscribe(data => {this.movie = data})
-  }
 
-  closeDetail(){
-    this.show=!this.show;
+    this._service.getGenres()
+      .subscribe((data:any) => this.genreList = data.genres);
   }
-
+    
   toggleMovieDetail(){
     this.show=!this.show;
   }
