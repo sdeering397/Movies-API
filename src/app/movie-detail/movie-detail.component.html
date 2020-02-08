@@ -1,9 +1,11 @@
 <div class="movie-detail" *ngIf="show">
     <p class="movie-overview">{{movie.overview}}</p>
-    <p *ngFor="let genre of genreList, let i=index">{{movie.genres[i].name}}</p>
-    <p class="movie-runtime">runtime: {{movie.runtime}} minutes</p>
-    <a>link to somewhere?</a>
-    <button class="add-to-watchlist">+</button>
+    <ng-container *ngFor="let genre of genreList, let i=index">
+        <p *ngIf="i<movie.genres.length">{{movie.genres[i].name}}</p>
+    </ng-container>
+    <p class="movie-runtime">Runtime: {{movie.runtime}} minutes</p>
+    <a [href]="movie.homepage">Link</a>
+    <button class="add-to-watchlist" title="Add to myLIST">+</button>
 </div>
-<button (click)="toggleMovieDetail()">See More</button>
+<button (click)="toggleMovieDetail()">{{text}}</button>
 
