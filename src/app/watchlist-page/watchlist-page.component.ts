@@ -10,7 +10,6 @@ import { ActivatedRoute } from '@angular/router';
 export class WatchlistPageComponent implements OnInit {
   @Input() 
 
-  @Output() delete = new EventEmitter<boolean>();
   
   movieId : number; 
   movies = []; 
@@ -23,9 +22,6 @@ export class WatchlistPageComponent implements OnInit {
 
   }
 
-  deleted() {
-    this.delete.emit(true);
-  }
 
   ngOnInit() {
     this._service.getMovieById(this.movieId).subscribe(data => {this.movie = data})
