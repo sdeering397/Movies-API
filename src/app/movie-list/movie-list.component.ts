@@ -1,6 +1,5 @@
 import { Component, OnInit , Input} from '@angular/core';
 import { ApiService } from '../api.service';
-import { IMovie } from '../imovie';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,14 +13,12 @@ export class MovieListComponent implements OnInit{
   showWatchList : boolean= true;
   movie : any; 
   movieId : number; 
-  movieList = [];
-  // watchList = []; 
-
+  
   constructor(private _service: ApiService) {}
 
   ngOnInit() {
     this._service.getMovieList()
-      .subscribe((data:any) => this.movieList = data.results);
+      .subscribe((data:any) => this._service.movieList = data.results);
 
   }
 

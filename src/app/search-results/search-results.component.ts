@@ -12,19 +12,13 @@ export class SearchResultsComponent implements OnInit {
   genreId : number; 
   show:boolean = false;
   movie : any; 
-  genreList = [];
-  searchList = []; 
+
 
   constructor(public _service: ApiService) { }
 
-  ngOnInit() {
-    // this._service.getMovieByGenre(this.movieId)
-
-    // this._service.getGenres()
-    //   .subscribe((data:any) => this.searchList = data.genres);
+    ngOnInit() {
   }
 
-  // populateResults(){
-  //   return this._service.movieList;
-  // }
+
+
 }

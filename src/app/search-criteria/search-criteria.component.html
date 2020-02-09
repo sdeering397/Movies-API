@@ -5,27 +5,21 @@
           <div class="dropdown">
               <button class="dropbtn">Genre</button>
               <div class="dropdown-content">
-                <a *ngFor="let genre of genreList" (click)="goMovieByGenre(genre.id)"
+                <a *ngFor="let genre of genreList" (click)="getMovieByGenre(genre.id)"
                 routerLink="/search-results">{{genre.name}}</a>
               </div>
             </div>
             <div class="dropdown">
-              <button class="dropbtn">Rating</button>
-              <div class="dropdown-content">
-                <a href="#">High to Low</a>
-                <a href="#">Low to High</a>
-              </div>
+              <button class="dropbtn" routerLink="/search-results" (click)='worstMovie()'>Worst Movies Ever</button>
             </div>
             <div class="dropdown">
-              <button class="dropbtn">Length</button>
-              <div class="dropdown-content">
-                <a href="#">Longest to Shortest</a>
-                <a href="#">Shortest to Longest</a>
-              </div>
+              <button class="dropbtn" routerLink="/search-results" (click)='highestGrossing()'>Highest Grossing Movies Ever</button>
             </div>
       </span>
   </p>
-  <img class="logo" src="../assets/images/logo.png" alt="CINEPHILIA+">
+  <img class="logo" src="" alt="CINEPHILIA+">
   <button (click)="hide()" routerLink="/watchlist-page"><span class="orange">+</span> myLIST</button>
+
+
 </nav>
 

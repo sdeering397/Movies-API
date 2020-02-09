@@ -9,7 +9,7 @@ import { SearchCriteriaComponent } from './search-criteria/search-criteria.compo
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { WatchlistPageComponent } from './watchlist-page/watchlist-page.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
-import { HomeComponent } from './home/home.component';
+
 import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
@@ -19,7 +19,6 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     MovieListComponent,
     WatchlistPageComponent,
     MovieDetailComponent,
-    HomeComponent,
     SearchResultsComponent
   ],
   imports: [

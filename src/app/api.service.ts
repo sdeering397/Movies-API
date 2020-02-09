@@ -33,6 +33,11 @@ export class ApiService {
   getMovieByGenre(genreId : number){
     return this.http.get(`${this.baseUrl}/discover/movie?api_key=${this.apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${genreId}`).subscribe((data : any) => this.movieList = data.results);
   }
-
+  getMoviesByPopularity(){
+    return this.http.get(`${this.baseUrl}/discover/movie?api_key=${this.apiKey}&language=en-US&sort_by=vote_average.asc&include_adult=false&include_video=false&page=1`)
+  }
+  getMoviesByRevenue(){
+    return this.http.get(`${this.baseUrl}/discover/movie?api_key=${this.apiKey}&language=en-US&sort_by=revenue.desc&include_adult=false&include_video=false&page=1`)
+  }
   
 }

@@ -9,23 +9,27 @@ import { ApiService } from '../api.service';
 export class SearchCriteriaComponent implements OnInit {
 
   @Input() 
-  // movieId : number; 
+ 
   genreId : number; 
-  // show:boolean = false;
-  // movie : any; 
-  genreList = [];
-
+ 
   constructor( private _service: ApiService ) {}
 
   ngOnInit() {
     this._service.getGenres()
-    .subscribe((data:any) => this.genreList = data.genres);
+    .subscribe((data:any) => this._service.genreList = data.genres);
   }
 
   goToSearchResults(genreId : number){
     return this._service.getMovieByGenre(genreId);
-  
- 
   }
 
+  worstMovie(){
+    this._service.getMoviesByPopularity()
+  .subscribe((data:any) => this._service.movieList = data.results);
+  }
+  
+  highestGrossing(){
+    this._service.getMoviesByRevenue()
+  .subscribe((data:any) => this._service.movieList = data.results);
+  }
 }
