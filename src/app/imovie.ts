@@ -1,4 +1,4 @@
 export interface IMovie {
-    rating : number;
-    length : number;
+    // rating : number;
+    // length : number;
 }

@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http'
 })
 
 export class ApiService {
-  watchList =[];
-  movieList = []; 
+  // watchList =[];
+  // movieList = []; 
 
   constructor(private http : HttpClient) {}
 
@@ -26,19 +26,11 @@ export class ApiService {
     return this.http.get(this.genre_url);
   }
 
-  getMoviesByGenre(genreId : number){
-    return this.http.get(`${this.baseUrl}/discover/movie?api_key=${this.apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${genreId}`)
-  }
-
   getMovieById(movieId : number){
     return this.http.get(`${this.baseUrl}/movie/${movieId}?api_key=${this.apiKey}&language=en-US&append_to_response=title,overview,runtime,revenue`);
   }
-<<<<<<< HEAD
-  
-=======
 
   getGenreBySearch(genreId : number){
-    return this.http.get(`${this.baseUrl}/discover/movie?api_key=${this.apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=flase&page=1&with_genres=${genreId}`);
+    return this.http.get(`${this.baseUrl}/discover/movie?api_key=${this.apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${genreId}`);
   }
->>>>>>> 650ccbe6132a3b9019e8578bb9f50491fba87fd0
 }

@@ -8,11 +8,7 @@ import { ApiService } from '../api.service';
 })
 export class SearchCriteriaComponent implements OnInit {
 
-<<<<<<< HEAD
-  constructor() {}
-=======
   constructor( private _service: ApiService ) {}
->>>>>>> 650ccbe6132a3b9019e8578bb9f50491fba87fd0
 
   ngOnInit() {
   }
