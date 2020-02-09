@@ -32,9 +32,10 @@ export class MovieListComponent implements IMovie {
     this.showWatchList=!this.showWatchList;
   }
 
-  addMovie(){
-    this.watchList.push(this.movie)
-  }
-  
+  addMovie(movie){
+    this.watchList.push(movie);
+    console.log(this.watchList)
+}
+ 
 
 }

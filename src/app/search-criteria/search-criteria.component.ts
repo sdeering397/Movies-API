@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'search-criteria',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchCriteriaComponent implements OnInit {
 
-  constructor() {}
+  constructor( private _service: ApiService ) {}
 
   ngOnInit() {
   }
 
+  genreSearch(genreId : number){
+    this._service.getGenreBySearch(genreId);
+  }
 }

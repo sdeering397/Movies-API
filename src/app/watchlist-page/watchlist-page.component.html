@@ -1,43 +1,8 @@
-<<<<<<< HEAD
-<div class="logo-header"><img src="/assets/images/logo.png" alt="header thumbnail"></div>
-
-<span class="flex">
-    
-    <div class="movie-card">
-        
-        <div class="movie-card-top">
-            <div class="thick button">+</div>
-            <img class="thumbnail" src="https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg" alt="movie thumbnail">
-        </div>
-        
-        <div class="movie-card-inner">
-            
-            <span class="flex">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <p class="padding-10">5</p>
-            </span>
-            
-            <h2 class="thick">Fight Club</h2>
-            <p>genre</p>
-            <p>runtime</p>
-            
-        </div>
-    </div>
-    
-    <button class="orange-button">Add more movies</button>
-    
-</span>
-=======
 <span class="flex">
     
   <div class="movie-card">
     
-    <div class="movie-card-inner" *ngFor="let watch of watchList">
-      
+    <div class="movie-card-inner" *ngFor="let movie of watchList">
       <span class="flex">
         <i class="fa fa-star" aria-hidden="true"></i>
         <i class="fa fa-star" aria-hidden="true"></i>
@@ -47,10 +12,9 @@
         <p class="padding-10"></p>
       </span>
       
-      <h2 class="thick">{{watch.title}}</h2>
-      <img class="thumbnail" [src]="movie._url/poster_path" alt="movie thumbnail">
+      <h2 class="thick">{{movie.title}}</h2>
+      <img class="thumbnail" [src]="movie.poster_path" alt="movie thumbnail">
       <p>Rating: {{movie.vote_average}} out of 10</p>
-
       <div class="movie-card-top">
           <movie-detail [movieId]="movie.id"></movie-detail>
         </div>
@@ -58,4 +22,3 @@
     </div>
   </div>
 </span>
->>>>>>> 1d52e4a9d47dcf1242781c200df1853d1fa2c615
