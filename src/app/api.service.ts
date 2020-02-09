@@ -4,33 +4,33 @@ import { HttpClient } from '@angular/common/http'
 @Injectable({
   providedIn: 'root'
 })
+
 export class ApiService {
+  watchList =[];
+  movieList = []; 
 
   constructor(private http : HttpClient) {}
 
-  _url='https://api.themoviedb.org/3/discover/movie?api_key=b9e5c9c00c0d2cb749516b3e2ecbfcc1&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1';
+  baseUrl : any ="https://api.themoviedb.org/3"
+  apiKey : any = "b9e5c9c00c0d2cb749516b3e2ecbfcc1"; 
+
+  _url=`${this.baseUrl}/discover/movie?api_key=${this.apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`;
+  genre_url=`${this.baseUrl}/genre/movie/list?api_key=${this.apiKey}`;
 
   getMovieList(){
     return this.http.get(this._url);
   }
 
-  _url1='https://api.themoviedb.org/3/discover/movie?api_key=b9e5c9c00c0d2cb749516b3e2ecbfcc1&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1';
-
-  getMovieListByDate(){
-    return this.http.get(this._url1);
+  // accesses the genre id url, which tells you which id # corresponds to which genre
+  getGenres(){
+    return this.http.get(this.genre_url);
   }
 
-  _url2='https://api.themoviedb.org/3/genre/movie/list?api_key=b9e5c9c00c0d2cb749516b3e2ecbfcc1';
-
-  getListOfGenres(){
-    return this.http.get(this._url2);
+  getMoviesByGenre(genreId : number){
+    return this.http.get(`${this.baseUrl}/discover/movie?api_key=${this.apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${genreId}`)
   }
 
-// baseUrl = this.id
-
-//   _url3=`https://api.themoviedb.org/3/movie/${this.baseUrl}?api_key=b9e5c9c00c0d2cb749516b3e2ecbfcc1&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`;
-
-//   getMovieById(){
-//     return this.http.get(this._url3);
-//   }
+  getMovieById(movieId : number){
+    return this.http.get(`${this.baseUrl}/movie/${movieId}?api_key=${this.apiKey}&language=en-US&append_to_response=title,overview,runtime,revenue`);
+  }
 }

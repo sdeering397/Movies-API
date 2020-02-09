@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p>movie-detail works!</p>
 
 <div class="movie-card">
@@ -41,3 +42,15 @@
         
     </div>
 </div>
+=======
+<div class="movie-detail" *ngIf="show">
+    <p class="movie-overview">{{movie.overview}}</p>
+    <ng-container *ngFor="let genre of genreList, let i=index">
+        <p *ngIf="i<movie.genres.length">{{movie.genres[i].name}}</p>
+    </ng-container>
+    <p class="movie-runtime">Runtime: {{movie.runtime}} minutes</p>
+    <a [href]="movie.homepage">More</a>
+</div>
+<button (click)="toggleMovieDetail()">{{text}}</button>
+
+>>>>>>> 1d52e4a9d47dcf1242781c200df1853d1fa2c615

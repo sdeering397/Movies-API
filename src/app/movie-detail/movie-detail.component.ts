@@ -1,20 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { ApiService } from '../api.service';
 import { IMovie } from '../imovie';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-movie-detail',
+  selector: 'movie-detail',
   templateUrl: './movie-detail.component.html',
   styleUrls: ['./movie-detail.component.css']
 })
-export class MovieDetailComponent implements IMovie {
 
-  rating : number;
-  genre : string;
-  length : number;
+export class MovieDetailComponent  {  
+  @Input() 
+  movieId : number; 
+  genreId : number; 
+  show:boolean = false;
+  movie : any; 
+  genreList = [];
 
-  constructor() { }
+  text: string = 'See More';
 
-  ngOnInit() {
+  constructor(private _service: ApiService, private router: Router) {}
+
+  ngOnInit(){
+    this._service.getMovieById(this.movieId).subscribe(data => {this.movie = data})
+
+    this._service.getGenres()
+      .subscribe((data:any) => this.genreList = data.genres);
+  }
+    
+  toggleMovieDetail(){
+    this.show=!this.show;
+    if (this.text === 'See More'){
+      this.text = 'Show Less'
+    }
   }
 
 }
