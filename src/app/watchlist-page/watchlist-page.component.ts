@@ -9,17 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./watchlist-page.component.css']
 })
 export class WatchlistPageComponent implements OnInit {
-<<<<<<< HEAD
-=======
-  @Input() 
-
-  
-  movieId : number; 
-  movies = []; 
-  watchList = [];
-  show:boolean = false;
-  movie : any; 
->>>>>>> kevins-branch
   
 
   constructor(private _service: ApiService, private route: ActivatedRoute) {
@@ -27,17 +16,12 @@ export class WatchlistPageComponent implements OnInit {
 
 
   ngOnInit() {
-<<<<<<< HEAD
-=======
-    this._service.getMovieById(this.movieId).subscribe(data => {this.movie = data})
-
 
   }
 
   remove(i){
     this._service.watchList.splice(i,1);
     
->>>>>>> kevins-branch
   }
 
 }
