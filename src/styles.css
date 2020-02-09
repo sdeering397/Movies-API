@@ -32,13 +32,13 @@ footer {
     justify-content: center;
     color: white;
 }
-i {
+.footer-icons {
     padding: 15px;
 }
 .icons {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 .fa-star {
     color: rgb(228, 77, 1);
@@ -83,7 +83,6 @@ p {
     background-color: rgb(228, 77, 1);
 }
 
-
 .movie-card {
     width: 350px;
     background-color: rgb(28, 28, 28);
@@ -92,7 +91,7 @@ p {
 }
 
 .movie-card-inner {
-    padding: 15px;
+    padding: 0px 15px 15px;
 }
 
 .movie-card-top {
@@ -114,6 +113,29 @@ p {
     padding: 10px;
     border-radius: 5px;
     width: 350px;
-    margin: 50px;
+    margin: 15px auto;
     font-size: large;
+}
+.orange-button:hover {
+    color: rgb(228, 77, 1);
+    background-color: white;
+}
+.link {
+    color: grey;
+    padding: 0px 0px 15px 0px;
+    text-decoration: none;
+}
+.link:hover {
+    color: rgb(228, 77, 1);
+}
+.watchlist-button {
+    background-color: rgb(28, 28, 28);
+    border: none;
+    color: white;
+    font-size: 15px;
+}
+.watchlist-button:hover {
+    background-color: white;
+    color: rgb(228, 77, 1);
+    font-weight: bolder;
 }

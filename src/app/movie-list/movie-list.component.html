@@ -2,22 +2,22 @@
     
     <div class="movie-card" *ngFor="let movie of movieList">
       
-      <div class="movie-card-inner">
-        <button class="add-to-watchlist" title="Add to myLIST" (click)="addMovie(movie)">
-            <span class="orange">+myLIST</span>
-        </button>
-        <span class="flex">
+      <div class="movie-card-inner movie-card-top">
+        <button class="add-to-watchlist button orange" title="Add to myLIST" (click)="addMovie(movie)">+</button>
+        <!-- <span class="flex">
           <i class="fa fa-star" aria-hidden="true"></i>
           <i class="fa fa-star" aria-hidden="true"></i>
           <i class="fa fa-star" aria-hidden="true"></i>
           <i class="fa fa-star" aria-hidden="true"></i>
           <i class="fa fa-star" aria-hidden="true"></i>
           <p class="padding-10"></p>
-        </span>
+        </span> -->
         
-        <h2 class="thick">{{movie.title}}</h2>
         <img class="thumbnail" [src]="movie._url/poster_path" alt="movie thumbnail">
-        <p>Rating: {{movie.vote_average}} out of 10</p>
+
+        <h2 class="thick">{{movie.title}}</h2>
+        
+        <p class="thick">Rating: {{movie.vote_average}} out of 10 <i class="fa fa-star" aria-hidden="true"></i></p>
 
         <div class="movie-card-top">
             <movie-detail [movieId]="movie.id"></movie-detail>
