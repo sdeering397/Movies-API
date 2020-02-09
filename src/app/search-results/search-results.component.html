@@ -1,6 +1,6 @@
 <span class="flex">
     
-    <div class="movie-card" *ngFor="let movie of searchList, let i=index">
+    <div class="movie-card" *ngFor="let movie of _service.movieList, let i=index">
       
       <div class="movie-card-inner">
         <button class="add-to-watchlist" title="Add to myLIST" (click)="addMovie(movie)">
@@ -16,7 +16,7 @@
         </span>
         
         <h2 class="thick">{{movie.title}}</h2>
-        <img class="thumbnail" [src]="movie._url/poster_path" alt="movie thumbnail">
+        <img class="thumbnail" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="movie thumbnail">
         <p>Rating: {{movie.vote_average}} out of 10</p>
 
         <div class="movie-card-top">

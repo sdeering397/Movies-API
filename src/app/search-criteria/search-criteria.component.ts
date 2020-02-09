@@ -10,10 +10,10 @@ export class SearchCriteriaComponent implements OnInit {
 
   @Input() 
   // movieId : number; 
-  // genreId : number; 
+  genreId : number; 
   // show:boolean = false;
   // movie : any; 
- genreList = [];
+  genreList = [];
 
   constructor( private _service: ApiService ) {}
 
@@ -22,8 +22,9 @@ export class SearchCriteriaComponent implements OnInit {
     .subscribe((data:any) => this.genreList = data.genres);
   }
 
-  goToSearchResults(genreId){
+  goToSearchResults(genreId : number){
     return this._service.getMovieByGenre(genreId);
+  
  
   }
 

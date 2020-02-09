@@ -16,7 +16,7 @@
         </span>
         
         <h2 class="thick">{{movie.title}}</h2>
-        <img class="thumbnail" [src]="movie._url/poster_path" alt="movie thumbnail">
+        <img class="thumbnail" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="movie thumbnail">
         <p>Rating: {{movie.vote_average}} out of 10</p>
 
         <div class="movie-card-top">

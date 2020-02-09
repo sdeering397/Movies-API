@@ -15,16 +15,16 @@ export class SearchResultsComponent implements OnInit {
   genreList = [];
   searchList = []; 
 
-  constructor(private _service: ApiService) { }
+  constructor(public _service: ApiService) { }
 
   ngOnInit() {
-    // this._service.getMoviesByGenre(this.movieId).subscribe(data => {this.movie = data})
+    // this._service.getMovieByGenre(this.movieId)
 
-    this._service.getGenres()
-      .subscribe((data:any) => this.searchList = data.genres);
+    // this._service.getGenres()
+    //   .subscribe((data:any) => this.searchList = data.genres);
   }
 
-  populateResults(){
-    return this.searchList
-  }
+  // populateResults(){
+  //   return this._service.movieList;
+  // }
 }

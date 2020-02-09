@@ -5,7 +5,7 @@
           <div class="dropdown">
               <button class="dropbtn">Genre</button>
               <div class="dropdown-content">
-                <a *ngFor="let genre of genreList" (click)="goToSearchResults(genre.id)"
+                <a *ngFor="let genre of genreList" (click)="goMovieByGenre(genre.id)"
                 routerLink="/search-results">{{genre.name}}</a>
               </div>
             </div>
