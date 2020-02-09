@@ -16,7 +16,7 @@ export class MovieDetailComponent  {
   show:boolean = false;
   movie : any; 
   genreList = [];
-  text: string = 'See More';
+  text: string = 'More';
 
   constructor(private _service: ApiService, private router: Router) {}
 
@@ -29,8 +29,11 @@ export class MovieDetailComponent  {
     
   toggleMovieDetail(){
     this.show=!this.show;
-    if (this.text === 'See More'){
-      this.text = 'Show Less'
+    if (this.text === 'More'){
+      this.text = 'Less'
+    }
+    else if (this.text === 'Less'){
+      this.text = 'More'
     }
   }
 
