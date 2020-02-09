@@ -29,3 +29,7 @@
 .dropdown-content a:hover {background-color: #000000;}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #fff;}
+
+.filter-text {
+  padding-right: 15px;
+}

@@ -1,12 +1,12 @@
 <nav>
   <p class="orange">
-      <span class="thin">FILTER BY:</span>
+      <span class="thin filter-text">FILTER BY:</span>
       <span class="thick">
           <div class="dropdown">
               <button class="dropbtn">Genre</button>
               <div class="dropdown-content">
-                <a *ngFor="let genre of genreList" (click)="getMovieByGenre(genre.id)"
-                routerLink="/search-results">{{genre.name}}</a>
+                <a *ngFor="let genre of _service.genreList" (click)="getMovieByGenre(genre.id)"
+                routerLink="/app-root">{{genre.name}}</a>
               </div>
             </div>
             <div class="dropdown">
@@ -17,9 +17,6 @@
             </div>
       </span>
   </p>
-  <img class="logo" src="" alt="CINEPHILIA+">
-  <button (click)="hide()" routerLink="/watchlist-page"><span class="orange">+</span> myLIST</button>
-
-
+  <img class="logo" src="../assets/images/logo.png" alt="CINEPHILIA+" routerLink="/app-root">
+  <button (click)="hide()" routerLink="/watchlist-page" class="watchlist-button"><span class="orange">+</span> myLIST</button>
 </nav>
-

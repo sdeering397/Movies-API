@@ -10,7 +10,7 @@ export class SearchResultsComponent implements OnInit {
   @Input() 
   movieId : number; 
   genreId : number; 
-  show:boolean = false;
+  show : boolean = false;
   movie : any; 
 
 
@@ -18,7 +18,5 @@ export class SearchResultsComponent implements OnInit {
 
     ngOnInit() {
   }
-
-
 
 }
