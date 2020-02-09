@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -9,6 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class WatchlistPageComponent implements OnInit {
   @Input() 
+
+  @Output() delete = new EventEmitter<boolean>();
+  
   movieId : number; 
   movies = []; 
   watchList = [];
@@ -20,8 +23,19 @@ export class WatchlistPageComponent implements OnInit {
 
   }
 
+  deleted() {
+    this.delete.emit(true);
+  }
+
   ngOnInit() {
     this._service.getMovieById(this.movieId).subscribe(data => {this.movie = data})
+
+
+  }
+
+  remove(i){
+    this._service.watchList.splice(i,1);
+    
   }
 
 }
