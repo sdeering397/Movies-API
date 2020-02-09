@@ -1,1 +1,34 @@
-<p>search-results works!</p>
+<span class="flex">
+    
+    <div class="movie-card" *ngFor="let movie of searchList, let i=index">
+      
+      <div class="movie-card-inner">
+        <button class="add-to-watchlist" title="Add to myLIST" (click)="addMovie(movie)">
+            <span class="orange">+myLIST</span>
+        </button>
+        <span class="flex">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <p class="padding-10"></p>
+        </span>
+        
+        <h2 class="thick">{{movie.title}}</h2>
+        <img class="thumbnail" [src]="movie._url/poster_path" alt="movie thumbnail">
+        <p>Rating: {{movie.vote_average}} out of 10</p>
+
+        <div class="movie-card-top">
+            <movie-detail [movieId]="movie.id"></movie-detail>
+          </div>
+        
+      </div>
+    </div>
+</span>
+
+
+
+        
+        
+   

@@ -16,7 +16,6 @@ export class MovieDetailComponent  {
   show:boolean = false;
   movie : any; 
   genreList = [];
-
   text: string = 'See More';
 
   constructor(private _service: ApiService, private router: Router) {}
