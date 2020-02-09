@@ -4,8 +4,7 @@
         <p *ngIf="i<movie.genres.length">{{movie.genres[i].name}}</p>
     </ng-container>
     <p class="movie-runtime">Runtime: {{movie.runtime}} minutes</p>
-    <a [href]="movie.homepage">Link</a>
-    <button class="add-to-watchlist" title="Add to myLIST">+</button>
+    <a [href]="movie.homepage">More</a>
 </div>
 <button (click)="toggleMovieDetail()">{{text}}</button>
 

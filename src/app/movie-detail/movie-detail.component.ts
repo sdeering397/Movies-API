@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { ApiService } from '../api.service';
 import { IMovie } from '../imovie';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'movie-detail',
@@ -15,9 +16,10 @@ export class MovieDetailComponent  {
   show:boolean = false;
   movie : any; 
   genreList = [];
-  public text: string = 'See More';
 
-  constructor(private _service: ApiService) {}
+  text: string = 'See More';
+
+  constructor(private _service: ApiService, private router: Router) {}
 
   ngOnInit(){
     this._service.getMovieById(this.movieId).subscribe(data => {this.movie = data})
@@ -32,4 +34,5 @@ export class MovieDetailComponent  {
       this.text = 'Show Less'
     }
   }
+
 }

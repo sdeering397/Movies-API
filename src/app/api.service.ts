@@ -6,6 +6,8 @@ import { HttpClient } from '@angular/common/http'
 })
 
 export class ApiService {
+  watchList =[];
+  movieList = []; 
 
   constructor(private http : HttpClient) {}
 
@@ -27,18 +29,6 @@ export class ApiService {
   getMoviesByGenre(genreId : number){
     return this.http.get(`${this.baseUrl}/discover/movie?api_key=${this.apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${genreId}`)
   }
-
-  // _url1=`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`;
-
-  // getMovieListByDate(){
-  //   return this.http.get(this._url1);
-  // }
-
-  // _url2=`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`;
-
-  // getListOfGenres(){
-  //   return this.http.get(this._url2);
-  // } 
 
   getMovieById(movieId : number){
     return this.http.get(`${this.baseUrl}/movie/${movieId}?api_key=${this.apiKey}&language=en-US&append_to_response=title,overview,runtime,revenue`);
