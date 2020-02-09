@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -8,12 +8,22 @@ import { ApiService } from '../api.service';
 })
 export class SearchCriteriaComponent implements OnInit {
 
+  @Input() 
+  // movieId : number; 
+  // genreId : number; 
+  // show:boolean = false;
+  // movie : any; 
+ genreList = [];
+
   constructor( private _service: ApiService ) {}
 
   ngOnInit() {
+    this._service.getGenres()
+    .subscribe((data:any) => this.genreList = data.genres);
   }
 
-  genreSearch(genreId : number){
-    this._service.getGenreBySearch(genreId);
+  goToSearchResults(){
+    
   }
+
 }
