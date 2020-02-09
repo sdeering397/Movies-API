@@ -1,22 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
 import { ApiService } from '../api.service';
 import { IMovie } from '../imovie';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'movie-list',
   templateUrl: './movie-list.component.html',
   styleUrls: ['./movie-list.component.css']
 })
-export class MovieListComponent {
-
-  // public rating : number;
-  // public length : number;
-  show:boolean = false;
-  showWatchList:boolean= true;
+export class MovieListComponent implements OnInit{
+  @Input() 
+  show : boolean = false;
+  showWatchList : boolean= true;
   movie : any; 
-
+  movieId : number; 
   movieList = [];
-  watchList = [];
+  // watchList = []; 
 
   constructor(private _service: ApiService) {}
 
@@ -31,9 +30,11 @@ export class MovieListComponent {
     this.showWatchList=!this.showWatchList;
   }
 
+  
   addMovie(movie){
-    this.watchList.push(movie);
-    console.log(this.watchList)
+    this._service.watchList.push(movie);
+    console.log(this._service.watchList);
+    return this._service.watchList
 }
 
   }

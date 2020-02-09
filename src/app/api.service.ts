@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http'
 })
 
 export class ApiService {
-  // watchList =[];
+  watchList =[];
   // movieList = []; 
 
   constructor(private http : HttpClient) {}

@@ -9,12 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./watchlist-page.component.css']
 })
 export class WatchlistPageComponent implements OnInit {
-  @Input() 
-  movieId : number; 
-  movies = []; 
-  watchList = [];
-  show:boolean = false;
-  movie : any; 
+  // @Input() 
+  // movieId : number; 
+  // movies = []; 
+  // watchList = [];
+  // show:boolean = false;
+  // movie : any; 
   
 
   constructor(private _service: ApiService, private route: ActivatedRoute) {
@@ -22,7 +22,7 @@ export class WatchlistPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._service.getMovieById(this.movieId).subscribe(data => {this.movie = data})
+    // this._service.getMovieById(this.movieId).subscribe(data => {this.movie = data})
 
   }
 

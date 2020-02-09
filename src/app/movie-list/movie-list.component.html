@@ -3,7 +3,7 @@
     <div class="movie-card" *ngFor="let movie of movieList">
       
       <div class="movie-card-inner">
-        <button class="add-to-watchlist" title="Add to myLIST" (click)="addMovie()">
+        <button class="add-to-watchlist" title="Add to myLIST" (click)="addMovie(movie)">
             <span class="orange">+myLIST</span>
         </button>
         <span class="flex">
