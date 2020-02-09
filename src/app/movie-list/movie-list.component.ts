@@ -11,20 +11,22 @@ import { Router } from '@angular/router';
 export class MovieListComponent implements IMovie {
 
   public rating : number;
-  public genre : string;
   public length : number;
   public show:boolean = false;
   public showWatchList:boolean= true;
   movie : any; 
+  movieId : number;
 
-  public movieList : IMovie[] = [];
-  public watchList : IMovie[] = [];
+  public movieList = [];
+  public watchList = [];
 
   constructor(private _service: ApiService) {}
 
   ngOnInit() {
     this._service.getMovieList()
       .subscribe((data:any) => this.movieList = data.results);
+
+    // this._service.getMovieById(this.movieId).subscribe(data => {this.movie = data})
   }
 
   hide(){
@@ -32,9 +34,13 @@ export class MovieListComponent implements IMovie {
     this.showWatchList=!this.showWatchList;
   }
 
-  addMovie(){
-    this.watchList.push(this.movie)
-  }
-  
+  addMovie(movie){
+    this.watchList.push(movie);
+    console.log(this.watchList) 
 
+    // this._service.getMovieById(this.movieId).subscribe(
+    //   (data: any) => {
+    //     this.watchList.push(movie(data));
+    //   })
+  }
 }

@@ -2,8 +2,8 @@
     
   <div class="movie-card">
     
-    <div class="movie-card-inner" *ngFor="let watch of watchList">
-      
+    <div class="movie-card-inner" *ngFor="let movie of watchList">
+
       <span class="flex">
         <i class="fa fa-star" aria-hidden="true"></i>
         <i class="fa fa-star" aria-hidden="true"></i>
@@ -13,8 +13,8 @@
         <p class="padding-10"></p>
       </span>
       
-      <h2 class="thick">{{watch.title}}</h2>
-      <img class="thumbnail" [src]="movie._url/poster_path" alt="movie thumbnail">
+      <h2 class="thick">{{movie.title}}</h2>
+      <img class="thumbnail" [src]="movie.poster_path" alt="movie thumbnail">
       <p>Rating: {{movie.vote_average}} out of 10</p>
 
       <div class="movie-card-top">
