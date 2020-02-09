@@ -22,8 +22,9 @@ export class SearchCriteriaComponent implements OnInit {
     .subscribe((data:any) => this.genreList = data.genres);
   }
 
-  goToSearchResults(){
-    
+  goToSearchResults(genreId){
+    return this._service.getMovieByGenre(genreId);
+ 
   }
 
 }

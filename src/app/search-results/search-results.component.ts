@@ -18,7 +18,7 @@ export class SearchResultsComponent implements OnInit {
   constructor(private _service: ApiService) { }
 
   ngOnInit() {
-    this._service.getMoviesByGenre(this.movieId).subscribe(data => {this.movie = data})
+    // this._service.getMoviesByGenre(this.movieId).subscribe(data => {this.movie = data})
 
     this._service.getGenres()
       .subscribe((data:any) => this.searchList = data.genres);
