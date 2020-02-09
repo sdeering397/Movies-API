@@ -2,14 +2,18 @@
     
   <div class="movie-card">
     
+<<<<<<< HEAD
     <div class="movie-card-inner" *ngFor="let movie of _service.watchList, let i=index">
+=======
+    <div class="movie-card-inner" *ngFor="let movie of _service.watchList; let i = index;">
+>>>>>>> kevins-branch
       <span class="flex">
         <i class="fa fa-star" aria-hidden="true"></i>
         <i class="fa fa-star" aria-hidden="true"></i>
         <i class="fa fa-star" aria-hidden="true"></i>
         <i class="fa fa-star" aria-hidden="true"></i>
         <i class="fa fa-star" aria-hidden="true"></i>
-        <p class="padding-10"></p>
+        <a  (click)='remove(i)' class="padding-10">X</a>
       </span>
       
       <h2 class="thick">{{movie.title}}</h2>
