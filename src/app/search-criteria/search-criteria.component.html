@@ -1,6 +1,40 @@
 <nav>
+<<<<<<< HEAD
     <p class="orange"><span class="thin">FILTER BY:</span>   <span class="thick"><a>GENRE</a> <a>RATING</a> <a>LENGTH</a></span></p>
     <img class="logo" src="../assets/images/logo.png" alt="CINEPHILIA+">
     <button routerLink="/watchlist-page" (click)="hide()"><span class="orange">+</span> myLIST</button>
   </nav>
   
+=======
+  <p class="orange">
+      <span class="thin">FILTER BY:</span>
+      <span class="thick">
+          <div class="dropdown">
+              <button class="dropbtn">Genre</button>
+              <div class="dropdown-content">
+                <a (click)='genreSearch(genreId = 18)'>Action</a>
+                <a href="#">Comedy</a>
+                <a href="#">Thriller</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">Rating</button>
+              <div class="dropdown-content">
+                <a href="#">High to Low</a>
+                <a href="#">Low to High</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">Length</button>
+              <div class="dropdown-content">
+                <a href="#">Longest to Shortest</a>
+                <a href="#">Shortest to Longest</a>
+              </div>
+            </div>
+      </span>
+  </p>
+  <img class="logo" src="../assets/images/logo.png" alt="CINEPHILIA+">
+  <p><span class="orange">+</span> myLIST</p>
+</nav>
+
+>>>>>>> 650ccbe6132a3b9019e8578bb9f50491fba87fd0

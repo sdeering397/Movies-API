@@ -1,0 +1,19 @@
+.movie-card {
+    width: auto;
+    display: flex;
+}
+.orange-button {
+    margin: 0px;
+    width: 200px;
+}
+.flex-reverse-row {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: flex-end
+}
+.movie-card-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

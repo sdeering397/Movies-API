@@ -15,17 +15,25 @@ export class MovieListComponent implements IMovie {
   public show:boolean = false;
   public showWatchList:boolean= true;
   movie : any; 
+<<<<<<< HEAD
   movieId : number;
 
   public movieList = [];
   public watchList = [];
+=======
+
+  public movieList : IMovie[] = [];
+  public watchList : IMovie[] = [];
+>>>>>>> 650ccbe6132a3b9019e8578bb9f50491fba87fd0
 
   constructor(private _service: ApiService) {}
 
   ngOnInit() {
     this._service.getMovieList()
       .subscribe((data:any) => this.movieList = data.results);
+  }
 
+<<<<<<< HEAD
     // this._service.getMovieById(this.movieId).subscribe(data => {this.movie = data})
   }
 
@@ -37,6 +45,18 @@ export class MovieListComponent implements IMovie {
   addMovie(movie){
     this.watchList.push(movie);
     console.log(this.watchList) 
+=======
+  hide(){
+    this.show=!this.show;
+    this.showWatchList=!this.showWatchList;
+  }
+
+  addMovie(movie){
+    this.watchList.push(movie);
+    console.log(this.watchList)
+}
+ 
+>>>>>>> 650ccbe6132a3b9019e8578bb9f50491fba87fd0
 
     // this._service.getMovieById(this.movieId).subscribe(
     //   (data: any) => {
