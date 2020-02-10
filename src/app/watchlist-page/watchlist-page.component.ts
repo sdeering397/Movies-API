@@ -10,18 +10,18 @@ import { Router } from '@angular/router';
 })
 export class WatchlistPageComponent implements OnInit {
   
-
+  
   constructor(private _service: ApiService, private route: ActivatedRoute) {
   }
-
-
+  
+  
   ngOnInit() {
     
   }
-
+  
   remove(i){
     this._service.watchList.splice(i,1);
     
   }
-
+  
 }

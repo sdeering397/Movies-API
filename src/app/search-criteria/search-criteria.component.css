@@ -1,35 +1,44 @@
 .dropdown-content a {
-    color: #fff;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #000000;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    
-  }
-  .dropbtn {
-    background-color: #000;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    
-  }
-.dropdown-content a:hover {background-color: #000000;}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: #fff;}
-
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+.dropbtn {
+  background-color: #000;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.dropbtn:hover {
+  color:rgb(228, 77, 1);
+  font-weight: bold;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+.dropdown-content a:hover {
+  background-color: #000000;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: #fff;
+}
 .filter-text {
   padding-right: 15px;
 }

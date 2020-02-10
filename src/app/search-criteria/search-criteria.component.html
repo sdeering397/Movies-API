@@ -1,22 +1,24 @@
 <nav>
   <p class="orange">
-      <span class="thin filter-text">FILTER BY:</span>
-      <span class="thick">
-          <div class="dropdown">
-              <button class="dropbtn">Genre</button>
-              <div class="dropdown-content">
-                <a *ngFor="let genre of _service.genreList" (click)="getMovieByGenre(genre.id)"
-                routerLink="/app-root">{{genre.name}}</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn" routerLink="/search-results" (click)='worstMovie()'>Worst Movies Ever</button>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn" routerLink="/search-results" (click)='highestGrossing()'>Highest Grossing Movies Ever</button>
-            </div>
-      </span>
+    <span class="thin filter-text">FILTER BY:</span>
+    <span class="thick">
+      <div class="dropdown">
+        <button class="dropbtn">Genre</button>
+        <div class="dropdown-content">
+          <a *ngFor="let genre of _service.genreList" (click)="getMovieByGenre(genre.id)"
+          routerLink="/app-root">{{genre.name}}</a>
+        </div>
+      </div>
+      <span>|</span>
+      <div class="dropdown">
+        <button class="dropbtn" routerLink="/search-results" (click)='worstMovie()'>Worst Movies Ever</button>
+      </div>
+      <span>|</span>
+      <div class="dropdown">
+        <button class="dropbtn" routerLink="/search-results" (click)='highestGrossing()'>Highest Grossing Movies Ever</button>
+      </div>
+    </span>
   </p>
-  <img class="logo" src="../assets/images/logo.png" alt="CINEPHILIA+" routerLink="/app-root">
+  <img class="logo" src="/assets/images/logo.png" alt="CINEPHILIA+" routerLink="/app-root">
   <button (click)="hide()" routerLink="/watchlist-page" class="watchlist-button"><span class="orange">+</span> myLIST</button>
 </nav>

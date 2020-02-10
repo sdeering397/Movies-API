@@ -2,8 +2,8 @@
 * {
     margin: 0px;
     font-family: 'Muli', sans-serif;
+    box-sizing: border-box;
 }
-
 nav{
     background-color: rgb(28, 28, 28);
     color: white;
@@ -12,18 +12,16 @@ nav{
     padding: 10px;
     align-items: center;
 }
-
 body {
     background-color: black;
 }
-
 .flex {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
-
 footer {
     background-color: rgb(122, 44, 6);
     border-top: rgb(228, 77, 1) 5px solid;
@@ -82,30 +80,25 @@ p {
     color: white;
     background-color: rgb(228, 77, 1);
 }
-
 .movie-card {
     width: 350px;
     background-color: rgb(28, 28, 28);
     margin: 50px;
     color: white;
 }
-
 .movie-card-inner {
     padding: 0px 15px 15px;
 }
-
 .movie-card-top {
     position: relative;
 }
-
 .logo {
     width: 200px;
 }
-
 .thumbnail {
     width: 350px;
+    margin-left: -15px;
 }
-
 .orange-button {
     background-color: rgb(228, 77, 1);
     color: white;

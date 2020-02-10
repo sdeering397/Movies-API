@@ -19,4 +19,10 @@ export class SearchResultsComponent implements OnInit {
     ngOnInit() {
   }
 
+  addMovie(movie){
+    this._service.watchList.push(movie);
+    console.log(this._service.watchList);
+    return this._service.watchList
+}
+
 }
